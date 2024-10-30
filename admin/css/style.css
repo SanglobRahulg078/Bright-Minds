@@ -1,0 +1,338 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400&display=swap');
+
+:root{
+   /* --main-color:#388da8; */
+   --main-color:#3A6187;
+   --main-light-color:#3a608796;
+   --red:#eb2f06;
+   --light-bg:#eee;
+   --white:#fff;
+   --black:#333;
+   --box-shadow:0 .5rem 1rem rgba(0,0,0,0.1);
+   --border:.2rem solid rgba(0,0,0,.3);
+}
+
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   border: none;
+   outline: none;
+   text-decoration: none;
+   font-family: 'Montserrat', sans-serif;
+}
+
+*::selection{
+   background-color: var(--main-color);
+   color: var(--white);
+}
+
+/* Narrower scrollbar for webkit browsers */
+*::-webkit-scrollbar {
+   height: 6px;
+}
+
+*::-webkit-scrollbar-track {
+   /* background-color: transparent; */
+}
+
+*::-webkit-scrollbar-thumb {
+   cursor: pointer;
+   background-color: #9DA4B1;
+}
+
+html{
+   font-size: 62.5%;
+   overflow-x: hidden;
+   scroll-behavior: smooth;
+   scroll-padding-top: 5rem;
+}
+
+body{
+   padding-left: 0;
+}
+
+.flex-btn {
+   display: flex;
+   column-gap: 1rem;
+   justify-content: space-between;
+   align-items: flex-end;
+}
+
+.button-section, .counter{   
+   display: flex;
+   justify-content: space-between;
+   padding: 8px;
+   margin-top: .2px;
+   border: 1px solid #ccc;
+}
+
+.btn {
+   padding: 1px 12px;   
+   /* padding: 4px 15px; */
+   font-size: 14px;
+   border-radius: 50px;
+   /* border: var(--border); */
+}
+
+.btn:hover {
+   background-color: var(--main-color);
+   color: var(--white);
+}
+
+.button-section .btn {
+   border: 2px solid var(--main-color);
+}
+
+#save,
+#confirm-submit{
+   border: 2px solid var(--main-color);
+   color: var(--white);
+   background-color: var(--main-color);
+}
+
+.parent_portal table .btn {
+   transition: all .6s ease;
+   background-color: var(--white);
+   color: var(--main-color);
+}
+.parent_portal table .btn:hover{
+   color: var(--white);
+   background-color: var(--main-color);
+}
+
+.header{
+   position: fixed;
+   top: 0; left: 0; bottom: 0;
+   background-color: var(--white);
+   border-right: var(--border);
+   background-color: var(--white);
+   width: 25rem;
+   padding: 2rem;
+   z-index: 1100;
+}
+
+.header .logo{
+   display: block;
+   text-align: center;
+   padding-bottom: 1rem;
+}
+
+.header .navbar a,
+.header .navbar select {
+   width: 100%;
+   display: block;
+   border-radius: .5rem;
+   margin: 10px 0 0 0;
+   font-size:1.5rem;
+   color: var(--black);
+   padding:1rem;
+   background-color: var(--light-bg);
+   border: var(--border);
+}
+
+.header .navbar a:hover{
+   background-color: var(--black);
+   color: var(--white);
+   text-decoration: none;
+}
+
+.header .navbar a i{
+   margin-right: 1.2rem;
+}
+
+#close-btn{
+   text-align: right;
+   padding-bottom: 1rem;
+   display: none;
+}
+
+#close-btn i{
+   height: 4rem;
+   width: 4.5rem;
+   line-height: 4rem;
+   border-radius: .5rem;
+   background-color: var(--red);
+   color: var(--white);
+   font-size: 2.5rem;
+   text-align: center;
+}
+
+#menu-btn{
+   position: sticky;
+   top: 1rem; 
+   left: 1rem;
+   color: var(--white);
+   font-size: 2rem;
+   z-index: 1000;
+   display: none;
+}
+
+.nav-1 {
+   background-color: var(--main-color);
+   justify-content: space-between;
+   padding: 10px 0;
+   position: sticky;
+   top: 0;
+   z-index: 1000;
+   border-radius: 10px;
+   margin: 0 5px;
+ }
+ 
+ .nav-1 a {
+   text-decoration: none;
+   color: #fff; /* Change this color as needed */
+   font-size: 18px;
+   margin: 0 15px;
+   margin-right: 10px;
+   display: flex;
+   align-items: center;
+ }
+ 
+ .nav-1 a:hover {
+   color: #ddd;
+ }
+ 
+ .language-options {
+   margin-top: 20px;
+ }
+ 
+   .text-box-section {
+      display: grid;
+      grid-template-columns: 1fr;
+      word-break: break-word;
+      margin: 0 auto;
+      background-color: #fff;
+   }
+
+   .profile_pic {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      /* object-fit: cover; */
+   }
+
+   input[type="radio"] {
+      cursor: pointer;
+      margin-right: 10px;
+   }
+
+   label:has(input[type="radio"]) {
+      font-size: 20px;
+   }
+
+
+   /* dashboard text editor  */
+   #editor {
+      height: 50vh;
+      border: 1px solid #ccc;
+   }
+   
+   /* Modal Styles */
+   .modal {
+      display: none;
+      position: fixed;
+      z-index: 9999 !important;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0,0,0,0.4);
+   }
+   
+   .modal-content {
+      background-color: #fefefe;
+      margin: 5% auto;
+      padding: 20px 20px 10px 20px;
+      border: 1px solid #888;
+      width: 95%;
+   }
+
+   #preview-content {
+      border: 1px solid #ccc;
+      padding: 10px 10px 10px 20px;
+      height: 350px;
+      overflow: scroll;
+   }
+
+   .close {
+      color: #fff;
+      font-size: 20px;
+      opacity: 1;
+   }
+
+   .close:hover,
+   .close:focus {
+      color:#fff;
+      text-decoration: none;
+      cursor: pointer;
+   }
+
+   #previewModel .flex  {
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      background-color: var(--main-color);
+      color: var(--white);
+      padding: 4px 4px 0 4px;
+   }
+
+   #toolbar button {
+      margin-right: 5px;
+   }
+
+.count-display {
+   font-size: 15px;
+   font-weight: bold;
+   display: flex;
+   align-items: center;
+   justify-content: space-around;
+   /* gap: 10px; */
+}
+
+.count-display>span:nth-child(1) {
+   border-left: 2px solid var(--main-color);
+}
+.count-display>span {
+   border-right: 2px solid var(--main-color);
+   padding: 0 10px;
+}
+.count-display span>span {
+   display: block;
+   text-align: center;
+   color: var(--main-color);
+}
+
+.dashboard #error-message {
+   color: var(--red);
+   font-size: 14px;
+}
+
+
+/* media queries  */
+@media (max-width:991px){
+   body{
+      padding-left: 0;
+   }
+
+   .header #close-btn, #menu-btn{
+      display: block !important;
+   }
+
+   .header{
+      left: -30rem;
+      border-right: none;
+      transition: .2s linear;
+   }
+
+   .header.active{
+      left: 0;
+      box-shadow: 10px 0 0 100vw rgba(0,0,0,.7);
+      
+   }
+
+   label:has(input[type="radio"]) {
+      font-size: 12px;
+   }
+}

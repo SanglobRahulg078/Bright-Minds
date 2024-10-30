@@ -1,5 +1,5 @@
   <?php include 'components/header.php'; ?>
-Rahul
+Rahul gupta
   <main class="main">
 
     <!-- Hero Section -->
